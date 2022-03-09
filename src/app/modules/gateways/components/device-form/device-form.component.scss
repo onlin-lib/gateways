@@ -1,0 +1,37 @@
+@import 'src/assets/scss/variables.scss';
+
+.gatways-form-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    .form-title{
+        font-size: 18px;
+        color: $gray;
+        margin-bottom: 20px;
+    }
+    .iner-wrapper{
+        .single-field{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            .field-label{
+                font-size: 14px;
+                color: $gray;
+                margin-bottom: 5px;
+            }
+            input{
+                border: 1px solid $light-gray;
+                height: 40px;
+                border-radius: 3px;
+                padding: 0px 10px;
+            }
+        }
+    }
+    .controls-wrapper{
+        .submission-button{
+            margin: 0px 10px;
+        }
+    }
+}

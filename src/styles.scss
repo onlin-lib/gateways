@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'src/assets/scss/variables.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.controls-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    .submission-button{
+        height: 40px;
+        width: 100px;
+        border-radius: 8px;
+        border: none;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, $green, $blue);
+        color: $white;
+        cursor: pointer;
+    }
+    .cancel-button{
+        height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    }
+    button:disabled{
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}

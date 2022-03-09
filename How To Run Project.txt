@@ -1,0 +1,7 @@
+steps to run the project 
+
+1-unzip the folder
+2-navigate inside the unzipped folder 
+3-npm install to install the node modules 
+4- ng servce to run the project
+5- navigate in browser to http://localhost:4200/

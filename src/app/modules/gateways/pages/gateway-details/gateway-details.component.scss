@@ -1,0 +1,23 @@
+@import 'src/assets/scss/variables.scss';
+
+.details-page-wrapper{
+    padding: 30px;
+    .gateways-single-details{
+        align-items: center;
+    border: 1px solid $light-gray;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 2px 1px $dark-gray;
+    margin-bottom: 30px;
+        .key{
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .value{
+            font-size: 14px;
+            color: $gray;
+        }
+    }
+}

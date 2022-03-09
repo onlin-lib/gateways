@@ -1,0 +1,29 @@
+<div class="gatways-form-wrapper">
+    <div>
+        <div class="form-title">
+            Adding New GateWay
+        </div>
+        <div class="iner-wrapper"  *ngIf="gatewayForm">
+            <form [formGroup]="gatewayForm">
+                <div class="single-field">
+                    <label class="field-label">GateWay Name</label>
+                    <input type="text" placeholder="Please Enter Gateway Name" formControlName="name"/>
+                </div>
+    
+                <div class="single-field">
+                    <label class="field-label">Serial Number</label>
+                    <input type="text" placeholder="Please Enter Gateway Serial Number" formControlName="serial"/>
+                </div>
+    
+                <div class="single-field">
+                    <label class="field-label">IPv4</label>
+                    <input type="text" placeholder="Please Enter IPv4" formControlName="ip"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="controls-wrapper" *ngIf="gatewayForm">
+        <button class="submission-button mx-2" [disabled]="gatewayForm.invalid" (click)="createGateWay()">Create</button>
+        <button class="cancel-button" (click)="cancel()">Cancel</button>
+    </div>
+</div>

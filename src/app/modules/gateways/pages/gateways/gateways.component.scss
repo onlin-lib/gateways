@@ -1,0 +1,28 @@
+@import 'src/assets/scss/variables.scss';
+
+.gateways-page-wraper{
+    height: 100vh;
+    overflow: hidden;
+    padding: 30px;
+    .adding-button-wrapper{
+        display: flex;
+    justify-content: flex-end;
+    .adding-button{
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(to bottom, $green, $blue);
+        color: $white;
+        padding: 5px 10px;
+        border-radius: 3px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        .bi{
+         font-size: 25px;   
+        }
+    }
+    }
+    .gateways-table{
+        height: calc(100% - 60px);
+    }
+}

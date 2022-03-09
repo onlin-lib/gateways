@@ -1,0 +1,31 @@
+<div class="details-page-wrapper">
+    <div class="gateways-single-details" *ngIf="getwayDetails">
+            <span>
+                <div class="key">Serial Number</div>
+                <div class="value">{{getwayDetails.serialNumber}}</div>
+            </span>
+            <span>
+                <div class="key">Name</div>
+                <div class="value">{{getwayDetails.name}}</div>
+            </span>
+            <span>
+                <div class="key">IPV4</div>
+                <div class="value">{{getwayDetails.ipv4}}</div>
+            </span>
+            <span>
+                <div class="key">Devices</div>
+                <div class="value">{{getwayDetails.devices}}</div>
+            </span>
+    </div>
+    <div class="devices-table">
+        <cts-table
+        [rows]="rows"
+        [columns]="columns"
+        [responsiveColumns]="responsiveColumns"
+        (actionOnRow)="performAction($event)"
+     ></cts-table>
+    </div>
+    <div class="controls-wrapper">
+        <button class="submission-button button btn" (click)="navigateBack()">Go Back</button>
+    </div>
+</div>

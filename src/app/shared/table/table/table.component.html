@@ -1,0 +1,70 @@
+<div >
+  <ngx-datatable
+    class="large-table"
+    [rows]="rows"
+    [columnMode]="'force'"
+    [externalSorting]="true"
+    (select)="onSelect($event)"
+    (sort)="onSort($event)"
+    (window:resize)="assignTableColumns($event)"
+    [rowHeight]="'auto'"
+    [selected]="selected"
+  >
+    <!-- | translate -->
+    <ng-container *ngFor="let column of tableColumns; let i = index">
+      <ngx-datatable-column
+        *ngIf="column.display"
+        [sortable]="column.sortable"
+        [name]="column.name"
+        [prop]="column.prop"
+        [resizeable]="false"
+        [draggable]="false"
+        [maxWidth]="column.size"
+        [headerClass]="column.headerClass ? column.headerClass : ''"
+      >
+        <ng-template
+          let-row="row"
+          let-value="value"
+          let-index="index"
+          ngx-datatable-cell-template
+        >
+          <ng-container *ngIf="column.type === 'text'">
+            <div class="cell-text-wrapper">
+              {{ value ? value : "--" }}
+            </div>
+          </ng-container>
+
+          <ng-container *ngIf="column.type === 'status'">
+            <div class="status-wrapper">
+              <span class="value {{ value }}">{{
+                value
+              }}</span>
+            </div>
+          </ng-container>
+
+          <ng-container *ngIf="column.type === 'actions' && rows.length !== 0">
+            <div class="actions-wrapper">
+              <i
+                class="bi bi-eye"
+                [matTooltip]="'View Details'"
+                (click)="performAction(row, 'view')"
+              ></i>
+              <i
+                class="bi bi-plus"
+                [matTooltip]="'Add Device'"
+                (click)="performAction(row, 'add')"
+              ></i>
+            </div>
+          </ng-container>
+
+          <ng-container *ngIf="column.type === 'date'">
+            <div class="cell-text-wrapper">
+              {{value}}
+            </div>
+          </ng-container>
+
+        </ng-template>
+      </ngx-datatable-column>
+    </ng-container>
+  </ngx-datatable>
+</div>

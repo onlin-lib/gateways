@@ -1,0 +1,20 @@
+[
+    {
+        "serialNumber":"895sd3-e576ds4-5sre3sd-8634s",
+        "name":"First Gate",
+        "ipv4":"198.186.1.25",
+        "devices":5
+    },
+    {
+        "serialNumber":"234sd3-d34ds4-sd43sd-sd34s",
+        "name":"Second Gate",
+        "ipv4":"198.186.1.46",
+        "devices":2
+    },
+    {
+        "serialNumber":"34d3-hts4-3g3sd-sd34s",
+        "name":"Third Gate",
+        "ipv4":"198.186.1.7",
+        "devices":3
+    }
+]

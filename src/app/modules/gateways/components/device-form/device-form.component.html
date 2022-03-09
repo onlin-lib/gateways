@@ -1,0 +1,29 @@
+<div class="gatways-form-wrapper">
+    <div>
+        <div class="form-title">
+            Adding New Device
+        </div>
+        <div class="iner-wrapper"  *ngIf="deviceForm">
+            <form [formGroup]="deviceForm">
+                <div class="single-field">
+                    <label class="field-label">UID</label>
+                    <input type="number" placeholder="Please Enter Device UID" formControlName="uid"/>
+                </div>
+    
+                <div class="single-field">
+                    <label class="field-label">Vendor</label>
+                    <input type="text" placeholder="Please Enter Device Vendor" formControlName="vendor"/>
+                </div>
+    
+                <div class="single-field">
+                    <label class="field-label">Status</label>
+                    <mat-slide-toggle formControlName="status"></mat-slide-toggle>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="controls-wrapper" *ngIf="deviceForm">
+        <button class="submission-button mx-2" [disabled]="deviceForm.invalid" (click)="createDevice()">Create</button>
+        <button class="cancel-button" (click)="cancel()">Cancel</button>
+    </div>
+</div>

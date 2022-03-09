@@ -1,0 +1,19 @@
+<div class="gateways-page-wraper">
+
+    <div class="adding-button-wrapper">
+        <span class="adding-button" (click)="openAddingGatewayForm()">
+            <span>Add Gateway</span>
+            <span class="bi bi-plus"></span>
+        </span>
+    </div>
+    <div class="gateways-table">
+        <cts-table
+           [rows]="rows"
+           [columns]="columns"
+           [responsiveColumns]="responsiveColumns"
+           (actionOnRow)="performAction($event)"
+        ></cts-table>
+    </div>
+
+    <app-gateways-form class="mt-5"></app-gateways-form>
+</div>
